@@ -3,22 +3,42 @@
     <div class="row">
       <div class="col-xs-4">
         <div class="well">
-          <h4><i class="glyphicon glyphicon-plus"></i> Add Item</h4>
-          <form class="form">
-            <div class="form-group">
-              <label for="itemName">Name&nbsp;</label>
-              <input type="text" class="form-control" id="itemName" placeholder="Name">
-            </div>
-            <div class="form-group">
-              <label for="itemSKU">SKU #&nbsp;</label>
-              <input type="text" class="form-control" id="itemSKU" placeholder="SKU">
-            </div>
-            <div class="form-group">
-              <label for="itemQty">Quantity&nbsp;</label>
-              <input type="number" class="form-control" id="itemQty" placeholder="Quantity">
-            </div>
-            <button type="submit" class="btn btn-success">Add Item</button>
-          </form>
+          {{#if addOrEdit 'Add'}}
+            <h4><i class="glyphicon glyphicon-plus"></i> Add Item</h4>
+            <form class="form">
+              <div class="form-group">
+                <label for="itemName">Name&nbsp;</label>
+                <input type="text" class="form-control" id="itemName" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="itemSKU">SKU #&nbsp;</label>
+                <input type="text" class="form-control" id="itemSKU" placeholder="SKU">
+              </div>
+              <div class="form-group">
+                <label for="itemQty">Quantity&nbsp;</label>
+                <input type="number" class="form-control" id="itemQty" placeholder="Quantity">
+              </div>
+              <button type="submit" class="btn btn-success">Add Item</button>
+            </form>
+          {{else}}
+            <h4><i class="glyphicon glyphicon-edit"></i> Edit Item</h4>
+            <form class="form">
+              <input type="hidden" id="itemId" name="itemId" value="{{item._id}}">
+              <div class="form-group">
+                <label for="itemName">Name&nbsp;</label>
+                <input type="text" class="form-control" id="itemName" value="{{item.name}}" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="itemSKU">SKU #&nbsp;</label>
+                <input type="text" class="form-control" id="itemSKU" value="{{item.sku}}" placeholder="SKU">
+              </div>
+              <div class="form-group">
+                <label for="itemQty">Quantity&nbsp;</label>
+                <input type="number" class="form-control" id="itemQty" value="{{item.quantity}}" placeholder="Quantity">
+              </div>
+              <button type="submit" class="btn btn-info">Update Item</button>
+            </form>
+          {{/if}}
         </div>
       </div>
       <div class="col-xs-8">
@@ -32,6 +52,7 @@
                   <th>SKU</th>
                   <th>Quantity</th>
                   <th>&nbsp;</th>
+                  <th>&nbsp;</th>
                 </tr>
               </thead>
               <tbody>
@@ -40,6 +61,11 @@
                     <td>{{name}}</td>
                     <td>{{sku}}</td>
                     <td>{{quantity}}</td>
+                    <td>
+                      <button class="btn btn-info btn-xs editItem">
+                        <i class="glyphicon glyphicon-edit"></i>
+                      </button>
+                    </td>
                     <td>
                       <button class="btn btn-danger btn-xs removeItem">
                         <i class="glyphicon glyphicon-remove"></i>
