@@ -19,7 +19,10 @@ if(Meteor.isClient) {
     'submit form' : function(event) {
       event.preventDefault();
 
-      var itemId = event.target.itemId.value;
+      // Get ItemId from Edit form (if current state)
+      if(typeof event.target.itemId !== 'undefined') {
+        var itemId = event.target.itemId.value;
+      }
 
       // Build new Item
       var item = {
