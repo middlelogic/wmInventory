@@ -50,6 +50,6 @@ Fix Bootstrap collapse on navbar item clicks.
 Add Sign-in, Sign-up and Sign-out functionality.
 
 ###### 7. User Inventory
-Seed database for testing... initialize items.
 Create Add Inventory Form
 Show List of Inventory Items
+Add functionality to "Add" form
