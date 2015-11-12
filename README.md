@@ -1,10 +1,10 @@
-### WM Inventory
+## WM Inventory
 
 By Tim Cooper - November 11, 2015
 
 ---
 
-##### Instructions
+#### Instructions
 
 * Use the MeteorJS stack to create an inventory app that is available after signing in.
 * Each user will have their own inventory.  Each inventory item will consist of a SKU and a quantity. Have CRUD functionality.
@@ -16,7 +16,7 @@ By Tim Cooper - November 11, 2015
 
 ---
 
-##### Docs
+#### Docs
 
 ###### 1. Create Meteor app
 `meteor create wmInventory`
@@ -30,3 +30,6 @@ git commit -m "START WORK"
 
 ###### 3. Set up app structure
 Create **client, server, lib and public** folders. Move files into appropriate folders.
+
+###### 4. Set up routing
+`meteor add iron:router`. Create router.js for handling paths.
