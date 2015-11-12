@@ -53,3 +53,13 @@ Add Sign-in, Sign-up and Sign-out functionality.
 Create Add Inventory Form
 Show List of Inventory Items
 Add functionality to "Add" form
+Add functionality to "Edit" button
+Add functionality to "Delete" button
+
+---
+
+###### 8. Developer Notes
+
+I have not removed the "insecure" and "autopublish" packages of this Meteor app.
+
+In production, the publish and subscribe relationship should be implemented.
