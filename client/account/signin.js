@@ -1,18 +1,15 @@
 if (Meteor.isClient) {
 
-  Template.signup.events({
+  Template.signin.events({
     'submit form': function(event) {
       event.preventDefault();
 
       // Get Email and Password from Form
-      var emailVar = event.target.signupEmail.value;
-      var passwordVar = event.target.signupPassword.value;
+      var emailVar = event.target.signinEmail.value;
+      var passwordVar = event.target.signinPassword.value;
 
-      // Create Account
-      Accounts.createUser({
-        email: emailVar,
-        password: passwordVar
-      }, function(err) {
+      // Attempt Login
+      Meteor.loginWithPassword(emailVar, passwordVar, function(err) {
 
         // Failed login
         if(err) {
@@ -22,9 +19,6 @@ if (Meteor.isClient) {
 
         // Successful login
         else {
-          // Notify user
-          toastr.success("Account created!");
-
           // Re-direct to Inventory
           Router.go('/inventory');
         }
