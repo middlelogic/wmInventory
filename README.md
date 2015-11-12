@@ -39,9 +39,17 @@ Create **client, server, lib and public** folders. Move files into appropriate f
 meteor add mizzao:bootstrap-3
 meteor add bootswatch:lumen
 ```
+Add bootstrap 3 and apply bootswatch Lumen theme.
 
 ###### 6. Add User Account config
 ```
 meteor add accounts-password
 ```
 Add Sign-in / Sign-up pages.. Add logged In conditions to navbar.
+Fix Bootstrap collapse on navbar item clicks.
+Add Sign-in, Sign-up and Sign-out functionality.
+
+###### 7. User Inventory
+Seed database for testing... initialize items.
+Create Add Inventory Form
+Show List of Inventory Items
