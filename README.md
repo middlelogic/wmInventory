@@ -39,3 +39,9 @@ Create **client, server, lib and public** folders. Move files into appropriate f
 meteor add mizzao:bootstrap-3
 meteor add bootswatch:lumen
 ```
+
+###### 6. Add User Account config
+```
+meteor add accounts-password
+```
+Add Sign-in / Sign-up pages.. Add logged In conditions to navbar.
