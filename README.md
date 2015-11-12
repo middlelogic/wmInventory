@@ -33,3 +33,9 @@ Create **client, server, lib and public** folders. Move files into appropriate f
 
 ###### 4. Set up routing
 `meteor add iron:router`. Create router.js for handling paths.
+
+###### 5. Add Bootstrap and Flat theme from Bootswatch
+```
+meteor add mizzao:bootstrap-3
+meteor add bootswatch:lumen
+```
